@@ -1,0 +1,14 @@
+<div class="row">
+  <h1>Settings</h1>
+  <h2>Add a Color!</h2>
+  <form>
+    Enter a named CSS color:
+    <input type="text" ng-model="newcolor" name="newcolor" />
+    </input>
+    <input type="submit" ng-click="addColor(newcolor)"></input>
+
+    <!-- Set up the input with a color wheel, but then realized you can't ask someone to "find the #c06925 block." Derp. -->
+    <!-- <input type="color" ng-model="newcolor" name="newcolor" value="#BBE078">
+    <input type="submit" ng-click="addColor(newcolor)"> -->
+  </form>
+</div>
