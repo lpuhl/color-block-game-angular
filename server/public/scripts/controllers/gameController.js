@@ -19,9 +19,13 @@ function init() {
 
 // click handler for guessing colors
 $scope.handleInput = function(clickedColor) {
-  if(clickedColor === $scope.dataFactory.currentColour()) {
+  if(clickedColor === $scope.currentColor) {
     alert('You got it!\n\nNow try another!');
-    init();
+    $scope.colors = $scope.dataFactory.colours();
+    $scope.messageText = "";
+    $scope.currentColor = $scope.dataFactory.getNewColour();
+    $scope.colorPrompt = 'Can you find the ' + $scope.currentColor + ' block?';
+
   } else {
     $scope.messageText = 'Oh no! You guessed wrong!';
   }
